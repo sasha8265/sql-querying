@@ -24,7 +24,10 @@ ORDER BY reviews desc
 LIMIT 1;
 
 -- Find the average rating for each category ordered by the highest rated to lowest rated. -- 
-SELECT category, AVG(rating) AS avg_rating FROM analytics GROUP BY category ORDER BY AVG(rating) desc;
+SELECT category, AVG(rating) AS avg_rating 
+FROM analytics 
+GROUP BY category 
+ORDER BY AVG(rating) desc;
 
 -- Find the name, price, and rating of the most expensive app with a rating that’s less than 3. --
 SELECT app_name, price, rating FROM analytics 
